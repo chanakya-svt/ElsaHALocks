@@ -1,0 +1,117 @@
+{
+  "format": 1,
+  "restore": {
+    "/Users/chanakya/__svtr/repos/dotnet/net6/ElsaHALocks/ElsaHALocks.csproj": {}
+  },
+  "projects": {
+    "/Users/chanakya/__svtr/repos/dotnet/net6/ElsaHALocks/ElsaHALocks.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "/Users/chanakya/__svtr/repos/dotnet/net6/ElsaHALocks/ElsaHALocks.csproj",
+        "projectName": "ElsaHALocks",
+        "projectPath": "/Users/chanakya/__svtr/repos/dotnet/net6/ElsaHALocks/ElsaHALocks.csproj",
+        "packagesPath": "/Users/chanakya/.nuget/packages/",
+        "outputPath": "/Users/chanakya/__svtr/repos/dotnet/net6/ElsaHALocks/obj/",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "/Users/chanakya/.nuget/NuGet/NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "net6.0"
+        ],
+        "sources": {
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net6.0": {
+            "targetAlias": "net6.0",
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net6.0": {
+          "targetAlias": "net6.0",
+          "dependencies": {
+            "DistributedLock.Postgres": {
+              "target": "Package",
+              "version": "[1.0.2, )"
+            },
+            "Elsa": {
+              "target": "Package",
+              "version": "[2.4.2.1, )"
+            },
+            "Elsa.Activities.Http": {
+              "target": "Package",
+              "version": "[2.4.2.1, )"
+            },
+            "Elsa.Activities.Temporal.Quartz": {
+              "target": "Package",
+              "version": "[2.4.2.1, )"
+            },
+            "Elsa.Caching.Rebus": {
+              "target": "Package",
+              "version": "[2.4.2.1, )"
+            },
+            "Elsa.Core": {
+              "target": "Package",
+              "version": "[2.4.2.1, )"
+            },
+            "Elsa.Designer.Components.Web": {
+              "target": "Package",
+              "version": "[2.4.2.1, )"
+            },
+            "Elsa.Persistence.EntityFramework.PostgreSql": {
+              "target": "Package",
+              "version": "[2.4.2.1, )"
+            },
+            "Elsa.Server.Api": {
+              "target": "Package",
+              "version": "[2.4.2.1, )"
+            },
+            "Microsoft.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[6.0.1, )"
+            },
+            "Npgsql.EntityFrameworkCore.PostgreSQL": {
+              "target": "Package",
+              "version": "[6.0.3, )"
+            },
+            "Quartz.Serialization.Json": {
+              "target": "Package",
+              "version": "[3.3.3, )"
+            },
+            "Rebus.PostgreSql": {
+              "target": "Package",
+              "version": "[7.4.0, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.AspNetCore.App": {
+              "privateAssets": "none"
+            },
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/6.0.101/RuntimeIdentifierGraph.json"
+        }
+      }
+    }
+  }
+}

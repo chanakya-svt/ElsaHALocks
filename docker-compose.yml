@@ -1,0 +1,37 @@
+version: "3.4"
+
+services:
+  postgres:
+    container_name: elsaha_postgres
+    image: "clkao/postgres-plv8:12-2"
+    environment:
+      POSTGRES_USER: "postgres"
+      POSTGRES_PASSWORD: "password"
+      PGDATA: "/data/postgres"
+    volumes:
+       - postgres:/data/postgres
+    ports:
+      - "15432:5432"
+    restart: unless-stopped
+  pgadmin:
+    container_name: elsaha_pgadmin
+    image: "dpage/pgadmin4:6.4"
+    environment:
+      PGADMIN_DEFAULT_EMAIL: "admin@something.com"
+      PGADMIN_DEFAULT_PASSWORD: admin
+      PGADMIN_CONFIG_SERVER_MODE: "False"
+      PGADMIN_CONFIG_MASTER_PASSWORD_REQUIRED: "False"
+    volumes:
+       - pgadmin:/var/lib/pgadmin
+       - ./docker-pgadmin-servers.json:/pgadmin4/servers.json
+    ports:
+      - "15433:80"
+    entrypoint:
+      - "/bin/sh"
+      - "-c"
+      - "/bin/echo 'postgres:5432:*:postgres:password' > /tmp/pgpassfile && chmod 600 /tmp/pgpassfile && /entrypoint.sh"
+    restart: unless-stopped
+
+volumes:
+  pgadmin:
+  postgres:
